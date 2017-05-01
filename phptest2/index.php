@@ -1,0 +1,33 @@
+<?php
+	include('login.php'); // Includes Login Script
+	if(isset($_SESSION['login_user'])){
+		header("location: profile.php");
+	}
+?>
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Login Form in PHP with Session</title>
+			<link href="style.css" rel="stylesheet" type="text/css">
+		</head>
+	<body>
+		<div id="main">
+			<h1>Badhan</h1>
+			<div id="login">
+				<h2>Login Form</h2>
+				<form action="" method="post">
+					<label>User ID :</label>
+					<input id="name" name="username" placeholder="User ID" type="text">
+					<label>Password :</label>
+					<label> <br> </label>
+					<input id="password" name="password" placeholder="*********" type="password">
+					<label> <br> </label>
+					<input name="submit" type="submit" value=" Login ">
+					<label><center> OR </center></label>
+					<input name="Signup" type="submit" value=" Signup ">
+					<span><?php echo $error; ?></span>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
